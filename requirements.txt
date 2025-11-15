@@ -1,0 +1,13 @@
+ultralytics==8.2.103
+opencv-python-headless==4.8.1.78
+numpy>=1.26.0
+pandas>=2.2.0
+matplotlib>=3.8.0
+pillow>=10.1.0
+streamlit>=1.31.0
+reportlab>=4.1.0
+pytesseract>=0.3.10
+shapely>=2.0.2
+geopandas>=0.14.3
+imageio>=2.34.0
+tqdm>=4.66.1
