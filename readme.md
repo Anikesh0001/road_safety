@@ -5,7 +5,7 @@ This project presents an AI-powered Road Infrastructure Assessment System that a
 
 The system performs:
 
-Automated video frame extraction
+Automated Video frame extraction
 
 Multi-class YOLO object + infrastructure element detection
 
