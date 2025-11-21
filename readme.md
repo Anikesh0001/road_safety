@@ -1,3 +1,57 @@
+# Road Safety — Road AI Project
+
+Short description
+- This repository contains scripts and utilities to extract frames from videos, run object detection and lane/shoulder analysis, compare overlays, and produce summary reports for road safety analysis.
+
+Repository layout (important files/folders)
+- `src/` — main Python scripts: `detect_multiclass.py`, `extract_frames.py`, `align_and_compare_multi.py`, `lane_and_shoulder.py`, `make_final_report.py`, etc.
+- `frames/`, `input_videos/`, `results/`, `charts/` — large generated artifacts (ignored in git).
+- `requirements.txt` — Python dependencies.
+- `best.pt`, `yolov8n.pt` — model weights (kept out of repo history; see Large Files below).
+
+Quick start (macOS / zsh)
+1. Create and activate a virtual environment:
+```bash
+python -m venv venv
+source venv/bin/activate
+```
+2. Install dependencies:
+```bash
+pip install -r requirements.txt
+```
+3. Example: extract frames from a video
+```bash
+python src/extract_frames.py --input input_videos/present.mp4 --output frames/present
+```
+4. Run detection (adjust model path):
+```bash
+python src/detect_multiclass.py --weights yolov8n.pt --source frames/present --output results/present
+```
+
+Large files and models
+- This repository intentionally excludes large files and virtual environments from git. If you need the model weights or example videos, you have several options:
+  - Use Git LFS: `git lfs install` and `git lfs track "*.pt"` then push the tracked files. See https://git-lfs.github.com.
+  - Store artifacts elsewhere (S3, Google Drive, or GitHub Releases) and add a small `scripts/download_artifacts.sh` to fetch them.
+
+Notes about the push performed
+- I removed large tracked files (e.g., `venv/`, `input_videos/`, `frames/`, `results/`, `charts/`, `best.pt`, `yolov8n.pt`) from git history and force-pushed a cleaned history to `origin/master`. The files remain on your disk but are no longer in the repository history.
+- If you (or collaborators) already cloned the repo before this history rewrite, you should either re-clone or run:
+```bash
+git fetch origin
+git reset --hard origin/master
+```
+
+Recommended next steps
+- If you want me to: I can set up Git LFS in this repo and migrate specific large files into LFS; or add a `scripts/download_artifacts.sh` plus a short `CONTRIBUTING.md` describing how to get large models and videos.
+
+Contributing
+- Please open issues or pull requests. If adding large artifacts, prefer hosting outside the repo or using Git LFS.
+
+License
+- Add your preferred license file (`LICENSE`) if you want to make this project public.
+
+Contact
+- For further help configuring LFS or CI, open an issue or ask here and I'll implement it.
 🚀 AI-Based Comparative Road Infrastructure Analysis System
 National Road Safety Hackathon 2025 – IIT Madras (CoERS)
 
