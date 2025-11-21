@@ -1,0 +1,76 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+.tox/
+*.coverage
+.coverage.*
+.pytest_cache/
+cover/
+
+# Virtual environments
+venv/
+.venv/
+env/
+ENV/
+env.bak/
+
+# macOS
+.DS_Store
+
+# Editor directories and files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Logs and databases
+*.log
+*.sqlite3
+
+# PyInstaller
+#  Usually these files are written by a python script from a template
+*.manifest
+*.spec
+
+# Sensitive or environment-specific files
+.env
+.env.*
+
+# Bytecode
+*.pyc
+
+# Coverage
+.coverage
+
+# Ignore datasets, outputs, and large artifacts
+frames/
+input_videos/
+results/
+charts/
+
+# Model weights and large binaries
+*.pt
+*.pth
+best.pt
+yolov8n.pt
+
+# Other large generated files
+*.tfrecord
